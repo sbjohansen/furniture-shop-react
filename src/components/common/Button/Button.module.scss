@@ -1,0 +1,67 @@
+@import "../../../styles/settings.scss";
+
+// .root {
+// }
+
+.main {
+  background-color: $footer-claim-bg;
+  color: $background-white;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  padding: 10px 30px;
+  @extend %transition-animation;
+
+  &:not(.noHover):hover {
+    color: $background-white !important;
+    background-color: $primary;
+    text-decoration: none;
+  }
+}
+
+.small {
+  @extend .main;
+  font-size: 13px;
+  line-height: 24px;
+  padding: 5px 10px;
+  font-weight: 400;
+}
+
+.outline {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid $footer-claim-bg;
+  color: $footer-claim-bg;
+  font-size: 13px;
+  line-height: 22px;
+  @extend %transition-animation;
+
+  &:not(.noHover):hover {
+    background-color: $footer-claim-bg;
+    color: $background-white;
+  }
+}
+
+.outline-orange {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid $footer-claim-bg;
+  color: $footer-claim-bg;
+  font-size: 13px;
+  line-height: 22px;
+  @extend %transition-animation;
+
+  &:not(.noHover):hover {
+    color: $primary;
+    border: 1px solid $primary;
+  }
+}
+
+.main-orange {
+  @extend .main;
+  background-color: $primary;
+
+  &:not(.noHover):hover {
+    background-color: lighten($primary, 10%);
+  }
+}

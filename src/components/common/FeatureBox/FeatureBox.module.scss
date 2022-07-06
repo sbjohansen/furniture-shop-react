@@ -1,0 +1,79 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  border: 1px solid $feature-border-color;
+  text-align: center;
+  margin-top: 40px;
+  height: 100%;
+
+  .iconWrapper {
+    height: 60px;
+    transform: translateY(-50%);
+    color: $text-color;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    @extend %transition-animation;
+
+    .icon {
+      position: relative;
+      z-index: 9;
+    }
+
+    &::before {
+      content: "";
+      border: 1px solid $feature-border-color;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 76px;
+      height: 76px;
+      border-radius: 100%;
+      background-color: $background-white;
+      z-index: -1;
+    }
+
+    &::after {
+      content: "";
+      width: 60px;
+      height: 60px;
+      border-radius: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 1px solid $feature-border-color;
+      @extend %transition-animation;
+    }
+  }
+
+  .content {
+    text-transform: uppercase;
+    color: rgb(42, 42, 42);
+    margin-top: -0.5rem;
+    letter-spacing: 1px;
+    font-weight: 300;
+    @extend %transition-animation;
+
+    h5 {
+      font-weight: 600;
+      margin: 0;
+    }
+  }
+
+  &.active:hover {
+    .iconWrapper {
+      color: $background-white;
+
+      &::after {
+        background-color: $primary;
+        border-color: $primary;
+      }
+    }
+
+    .content {
+      color: $primary;
+    }
+  }
+}

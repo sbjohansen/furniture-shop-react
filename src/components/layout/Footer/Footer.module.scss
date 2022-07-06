@@ -1,0 +1,106 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  .footerMenu {
+    background-color: $footer-bg;
+    padding: 3rem 0;
+
+    .menuWrapper {
+      h6 {
+        color: $background-white;
+        text-transform: uppercase;
+        margin: 0 0 1rem 0;
+      }
+
+      ul {
+        margin: 0 0 1.5rem 0;
+        padding: 0;
+        list-style: none;
+        li {
+          a {
+            font-size: 14px;
+            line-height: 30px;
+            color: $footer-text;
+
+            &:hover {
+              color: $background-white;
+            }
+          }
+        }
+      }
+    }
+
+    .paymentMethods {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        display: inline-block;
+      }
+    }
+  }
+
+  .bottomBar {
+    background-color: $footer-claim-bg;
+
+    :global(.container) > :global(.row) {
+      height: 95px;
+    }
+
+    .copyright {
+      p {
+        margin: 0;
+        color: $footer-text;
+        font-size: 14px;
+        line-height: 26px;
+      }
+    }
+
+    .socialMedia {
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+          display: inline-block;
+          margin-left: 1rem;
+
+          a {
+            color: $footer-text;
+            text-decoration: none;
+
+            &:hover {
+              color: $primary;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .bottomBar {
+    .copyright {
+      padding-right: 120px;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .bottomBar {
+    .copyright {
+      padding: 20px;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .bottomBar {
+    .copyright {
+      padding: 5px;
+    }
+  }
+}

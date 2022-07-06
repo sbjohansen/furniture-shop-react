@@ -1,0 +1,124 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  background-color: $background-white;
+  border: 1px solid $product-box-border-color;
+  margin-bottom: 2rem;
+
+  &:hover .price {
+    background: $primary;
+  }
+
+  .photo {
+    position: relative;
+    padding: 80% 10px 0 10px;
+
+    background: {
+      color: $photo-placeholder;
+      size: contain;
+      position: center;
+      repeat: no-repeat;
+    }
+    overflow: hidden;
+    align-items: flex-end;
+
+    .images {
+      position: absolute;
+      object-fit: cover;
+      padding: 0;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 0;
+      size: cover;
+    }
+
+    .sale {
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $form-border-color;
+      border-radius: 50%;
+      color: $background-white;
+      padding: 30px 15px 5px 15px;
+    }
+
+    .buttons {
+      position: absolute;
+      visibility: hidden;
+      opacity: 0;
+      top: 85%;
+      display: flex;
+      justify-content: space-between;
+      z-index: 1;
+    }
+
+    &:hover .buttons {
+      visibility: visible;
+      opacity: 100;
+      transition: 1s;
+    }
+  }
+
+  .content {
+    text-align: center;
+    padding: 20px;
+
+    h5 {
+      color: $primary;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 1px;
+    }
+
+    .stars {
+      a {
+        text-decoration: none;
+        color: $stars-average;
+      }
+    }
+  }
+
+  .line {
+    margin: 0 10px;
+    border-bottom: 1px solid $footer-claim-bg;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      left: 50%;
+      width: 30px;
+      border-bottom: 4px solid $primary;
+      transform: translateX(-50%);
+    }
+  }
+
+  .actions {
+    padding: 15px 10px 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .isFavorite {
+    color: $background-white;
+    background-color: $primary;
+  }
+
+  .priceold {
+    color: $text-price-old;
+    font-size: 16px;
+    text-decoration: line-through;
+    background: none;
+    padding-left: $base-padding;
+  }
+
+  .compare {
+    color: $background-white;
+    background-color: $primary;
+  }
+}

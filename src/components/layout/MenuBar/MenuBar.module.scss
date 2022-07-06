@@ -1,0 +1,58 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  position: relative;
+  box-shadow: 2px 3.464px 6px $box-shadow;
+  background-color: #ffffff;
+
+  :global(.container) > :global(.row) {
+    height: 120px;
+  }
+
+  .menu {
+    align-self: stretch;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+
+      li {
+        list-style: none;
+        display: flex;
+        align-items: stretch;
+      }
+    }
+
+    a {
+      color: $text-color;
+      text-transform: uppercase;
+      font-size: 12px;
+      padding: 1rem;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      border-top: 4px solid $background-white;
+      font-weight: 500;
+      letter-spacing: 1px;
+      @extend %transition-animation;
+
+      &:hover,
+      &.active {
+        background-color: $primary;
+        color: $background-white;
+        border-color: $primary;
+      }
+
+      &.active {
+        border-color: $text-color;
+      }
+    }
+
+    .mobile_menu {
+      margin: 0 auto;
+    }
+  }
+}

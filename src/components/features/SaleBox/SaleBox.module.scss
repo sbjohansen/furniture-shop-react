@@ -1,0 +1,239 @@
+@import "../../../styles/settings.scss";
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 400px;
+
+  .left_inner {
+    width: 50%;
+    height: 100%;
+    color: $text-color-dirty-white;
+
+    img {
+      width: 100%;
+      height: 310px;
+    }
+
+    .box_img::before {
+      position: absolute;
+      content: "";
+      opacity: 0.4;
+
+      background-color: $color-black;
+      width: 45%;
+      height: 65%;
+      top: 20px;
+      left: 20px;
+    }
+
+    .promo_text {
+      font-size: 28px;
+      bottom: 50%;
+      left: 1%;
+
+      padding-left: 25px;
+      span {
+        display: block;
+        font-size: 40px;
+        font-weight: 700;
+      }
+    }
+    .text_price {
+      color: $text-color-dirty-white;
+      bottom: 30%;
+      left: 3%;
+      font-size: 30px;
+      font-weight: 700;
+      border: 5px solid $text-color-dirty-white;
+      padding: 7px;
+    }
+  }
+  .right_inner {
+    position: relative;
+    flex-direction: column;
+    width: 50%;
+    height: 413px;
+    padding-left: 30px;
+    img {
+      width: 100%;
+      height: 100%;
+      padding-bottom: 20px;
+      object-fit: cover;
+    }
+
+    .overlay_top {
+      height: 100%;
+    }
+
+    .overlay_top::before {
+      position: absolute;
+      content: "";
+      opacity: 0.4;
+
+      background-color: $color-black;
+      width: 94.5%;
+      height: 35%;
+      top: 0px;
+      left: 30px;
+    }
+
+    .overlay_bottom {
+      height: 100%;
+    }
+
+    .overlay_bottom::before {
+      position: absolute;
+      content: "";
+      opacity: 0.4;
+
+      background-color: $color-black;
+      width: 94.5%;
+      height: 35%;
+      top: 40%;
+      left: 30px;
+    }
+  }
+  .right_inner > div {
+    padding: 0;
+    margin: 0;
+    height: 40%;
+  }
+  p {
+    position: absolute;
+    z-index: 1;
+  }
+
+  .topSale_text {
+    top: 10%;
+    left: 40%;
+    font-size: 24px;
+
+    padding-right: 150px;
+    line-height: 1;
+    color: $text-color-white;
+    span {
+      font-size: 20px;
+    }
+  }
+
+  .topSale_text_price {
+    top: 23%;
+    left: 40%;
+    font-size: 24px;
+    color: $text-price-sale;
+  }
+
+  .bottomSale_text {
+    font-size: 24px;
+    top: 50%;
+    left: 50%;
+
+    color: $text-price-sale;
+    span {
+      font-size: 20px;
+      left: 100%;
+      color: $text-color-white;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+    .left_inner {
+      width: 100%;
+      padding-bottom: 20px;
+
+      .box_img::before {
+        width: 95%;
+        height: 39%;
+        top: 13px;
+        left: 17px;
+      }
+      .promo_text {
+        font-size: 20px;
+        top: 20%;
+        left: 1%;
+        padding-left: 25px;
+        span {
+          display: block;
+          font-size: 40px;
+          font-weight: 700;
+        }
+      }
+      .text_price {
+        color: $text-color-dirty-white;
+        top: 31%;
+        left: 5%;
+        bottom: 58%;
+        font-size: 30px;
+        font-weight: 700;
+        border: 5px solid $text-color-dirty-white;
+        padding: 7px;
+      }
+    }
+    .right_inner {
+      flex-wrap: nowrap;
+      flex-direction: row;
+      .top_inner {
+        position: absolute;
+        left: -50%;
+        width: 95%;
+        height: 100%;
+      }
+      .bottom_inner {
+        position: absolute;
+        left: 55%;
+        width: 95%;
+        height: 100%;
+      }
+      .topSale_text {
+        span {
+          font-size: 24px;
+        }
+      }
+      .topSale_text_price {
+        font-size: 24px;
+        padding-top: 12px;
+      }
+
+      .bottomSale_text {
+        top: 55%;
+        left: 15%;
+      }
+
+      .overlay_top::before {
+        width: 100%;
+        height: 95%;
+        top: 0;
+        left: 0;
+      }
+      .overlay_bottom::before {
+        width: 100%;
+        height: 95%;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 445px) {
+  .wrapper {
+    .left_inner {
+      .box_img::before {
+        left: 8px;
+      }
+    }
+    .right_inner {
+      .topSale_text {
+        left: 7%;
+      }
+      .topSale_text_price {
+        left: 7%;
+      }
+    }
+  }
+}
