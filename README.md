@@ -22,8 +22,7 @@ Webpage is adjusted for usage on mobile devices/tablets and desktop.
 
 ## Demo/Preview
 
-Link for webpage - comming later
-
+[Netlify - demo](https://sbj-furniture-shop.netlify.app/)
 
 
 ## Prerequisites
